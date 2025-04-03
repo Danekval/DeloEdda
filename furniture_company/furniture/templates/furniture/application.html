@@ -1,0 +1,13 @@
+{% extends 'furniture/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Оставить заявку</h2>
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary mt-3">Отправить</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'furniture/base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать в мебельную компанию "Уют"</h1>
+    <p class="lead">Создаем комфорт в вашем доме с 2010 года</p>
+    <hr class="my-4">
+    <p>Широкий ассортимент качественной мебели по доступным ценам.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'catalog' %}" role="button">Посмотреть каталог</a>
+</div>
+{% endblock %}

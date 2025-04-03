@@ -1,0 +1,11 @@
+{% extends 'furniture/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-success">
+        <h4>Спасибо за заявку!</h4>
+        <p>Наш менеджер свяжется с вами в ближайшее время.</p>
+        <a href="{% url 'catalog' %}" class="btn btn-primary">Вернуться в каталог</a>
+    </div>
+</div>
+{% endblock %}
