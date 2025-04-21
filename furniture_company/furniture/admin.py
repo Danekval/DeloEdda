@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import Product, Application
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'created_at')  # Какие поля показывать в списке
-    search_fields = ('name', 'description')  # По каким полям можно искать
-    list_filter = ('created_at',)  # Фильтры справа
+# Если у вас есть другие модели, импортируйте их здесь
+from .models import Furniture
+from .models import Application # Пример для модели Furniture
+
+# Зарегистрируйте ваши модели
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('name', 'phone', 'created_at')
-    search_fields = ('name', 'phone', 'email')
-# Register your models here.
+    list_display = ('name', 'email', 'created_at')
